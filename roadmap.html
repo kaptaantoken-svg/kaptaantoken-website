@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kaptaan Token</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background: rgba(0,0,0,0.6);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: limegreen;
+    }
+
+    /* Hero Banner */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      background: url('assets/banner.png') center/cover no-repeat;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      color: limegreen;
+      text-shadow: 0px 0px 15px black;
+    }
+
+    /* Smoke Effect */
+    .smoke {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 200px;
+      background: radial-gradient(circle, rgba(0,255,0,0.3), transparent 70%);
+      filter: blur(80px);
+      animation: rise 6s infinite ease-in-out;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(20px); opacity: 0.6; }
+      50% { transform: translateY(-20px); opacity: 0.3; }
+      100% { transform: translateY(20px); opacity: 0.6; }
+    }
+
+    /* Roadmap Section */
+    .roadmap {
+      padding: 80px 20px;
+      background: #111;
+      text-align: center;
+    }
+
+    .roadmap h2 {
+      font-size: 40px;
+      margin-bottom: 30px;
+      color: limegreen;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: #222;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,255,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h3 {
+      color: limegreen;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#presale">Presale</a>
+    <a href="#mining">Mining</a>
+    <a href="#apk">APK</a>
+    <a href="#disclaimer">Disclaimer</a>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero" id="hero">
+    <img src="assets/logo.png" alt="Kaptaan Token Logo" style="width:150px;margin-bottom:20px;" />
+    <h1>Kaptaan Token</h1>
+    <div class="smoke"></div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section class="roadmap" id="roadmap">
+    <h2>KaptaanToken Roadmap</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Phase 1: Launch</h3>
+        <p>Website live, Mining system start (Watch Ads + WhatsApp Share), Referral system enabled.</p>
+      </div>
+      <div class="card">
+        <h3>Phase 2: Community Growth</h3>
+        <p>Airdrop & Rewards distribution, Presale launch on website, Social media promotions.</p>
+      </div>
+      <div class="card">
+        <h3>Phase 3: Expansion</h3>
+        <p>Token supply transparency dashboard, Basic exchange listing (local/DEX), Community governance poll.</p>
+      </div>
+      <div class="card">
+        <h3>Phase 4: Future Goals</h3>
+        <p>Future exchange listings & utility integrations once initial goals are achieved.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Kaptaan Token. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

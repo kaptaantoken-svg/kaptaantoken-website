@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KaptaanToken</title>
+  <style>
+    /* Reset & Base */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
+    body { background: linear-gradient(135deg, #001a00 0%, #003300 40%, #000000 100%); color:white; text-align:center; overflow-x:hidden; scroll-behavior:smooth; }
+    a { text-decoration:none; }
+
+    /* Banner */
+    .banner { position:relative; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; overflow:hidden; }
+    .banner img { width:150px; height:auto; margin-bottom:20px; filter: drop-shadow(0 0 20px #00ff66); }
+    .banner h1 { font-size:4.5rem; color:#00ff66; text-shadow:0 0 20px #00ff66,0 0 40px #00ff66; letter-spacing:3px; }
+    .banner h2 { margin-top:10px; font-size:1.5rem; color:#b3ffcc; }
+
+    /* Smoke */
+    .smoke { position:absolute; bottom:0; left:50%; width:200%; height:100%; background:radial-gradient(circle, rgba(0,255,100,0.15) 10%, transparent 70%); transform:translateX(-50%); animation:rise 12s infinite ease-in-out; filter: blur(90px); opacity:0.6; }
+    @keyframes rise { 0%{transform:translate(-50%,100%);opacity:0.2} 50%{transform:translate(-50%,0%);opacity:0.7} 100%{transform:translate(-50%,-100%);opacity:0;} }
+
+    /* Buttons */
+    .buttons { margin-top:50px; display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+    .buttons a { display:inline-block; background:#00ff66; color:black; padding:14px 30px; font-size:1.1rem; font-weight:bold; border-radius:30px; text-transform:uppercase; box-shadow:0 0 20px #00ff66; transition:0.3s; }
+    .buttons a:hover { background:#000; color:#00ff66; border:2px solid #00ff66; box-shadow:0 0 30px #00ff66; }
+
+    /* Sections */
+    section { padding:100px 20px; min-height:80vh; }
+    #disclaimer { background:#111; }
+    #roadmap { background:#222; }
+    #presale { background:#111; }
+    #mining { background:#222; }
+    #apk { background:#111; }
+
+    /* Card Styles */
+    .cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:25px; max-width:1000px; margin:20px auto; }
+    .card { background:#111; padding:25px; border-radius:20px; box-shadow:0 0 15px rgba(0,255,100,0.4); position:relative; overflow:hidden; transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow:0 0 30px rgba(0,255,100,0.6); }
+    .card h3 { color:#00ff66; margin-bottom:10px; }
+    .card p { color:#ccc; word-break: break-word; }
+    .card a { display:inline-block; margin-top:15px; padding:12px 30px; background:#00ff66; color:black; border-radius:12px; font-weight:bold; text-decoration:none; box-shadow:0 0 20px #00ff66; transition:0.3s; }
+    .card a:hover { background:#000; color:#00ff66; box-shadow:0 0 25px #00ff66; border:2px solid #00ff66; }
+
+    @keyframes slideGlow { 0%{left:-75%} 50%{left:100%} 100%{left:-75%} }
+    .card div.glow { position:absolute; top:0; left:-75%; width:50%; height:100%; background:linear-gradient(120deg, rgba(0,255,100,0.3), rgba(0,255,100,0.8), rgba(0,255,100,0.3)); transform: skewX(-20deg); animation: slideGlow 3s infinite; }
+
+    /* Presale small disclaimer */
+    .small-disclaimer { font-size:0.85rem; color:#b3ffcc; margin-top:10px; max-width:400px; margin-left:auto; margin-right:auto; }
+
+    /* APK button */
+    .apk-btn { display:inline-block; background:#00ff66; color:black; padding:15px 40px; border-radius:20px; font-weight:bold; font-size:1.2rem; box-shadow:0 0 25px #00ff66; text-decoration:none; transition:0.3s; margin-top:20px; }
+    .apk-btn:hover { background:#000; color:#00ff66; box-shadow:0 0 35px #00ff66; border:2px solid #00ff66; }
+
+    /* Responsive */
+    @media(max-width:600px){ .banner h1{ font-size:3rem; } .banner h2{ font-size:1.2rem; } }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="banner">
+    <div class="smoke"></div>
+    <img src="logo.png.png" alt="KaptaanToken Logo" />
+    <h1>KaptaanToken</h1>
+    <h2>The Future of Meme Utility Tokens 🚀</h2>
+
+    <div class="buttons">
+      <a href="#disclaimer">Disclaimer</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#presale">Presale</a>
+      <a href="#mining">Mining</a>
+      <a href="#apk">APK</a>
+    </div>
+  </div>
+
+  <!-- Disclaimer Section -->
+  <section id="disclaimer">
+    <h2 style="color:#00ff66;">Disclaimer</h2>
+    <p style="color:#b3ffcc; max-width:900px; margin:auto;">
+      All information on this website is for educational and informational purposes only. Cryptocurrency investments carry risks. Please consult financial experts before investing. KaptaanToken and its affiliates are not responsible for any losses incurred.
+    </p>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section id="roadmap">
+    <h2 style="color:#00ff66;">Roadmap</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Phase 1: Launch</h3>
+        <p>Website live, Mining system starts (Watch Ads + WhatsApp Share), Referral system enabled.</p>
+      </div>
+      <div class="card">
+        <h3>Phase 2: Community Growth</h3>
+        <p>Airdrop & Rewards distribution, Presale launch on website, Social media promotions.</p>
+      </div>
+      <div class="card">
+        <h3>Phase 3: Expansion</h3>
+        <p>Token supply transparency dashboard, Basic exchange listing (local/DEX), NFT launch coming soon.</p>
+      </div>
+      <div class="card">
+        <h3>Phase 4: Future Goals</h3>
+        <p>Major exchange listings, Utility integrations, Governance polls, New features updates.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Presale Section -->
+  <section id="presale">
+    <h2 style="color:#00ff66;">KaptaanToken Presale</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="glow"></div>
+        <h3>Buy Presale KTN</h3>
+        <p>Get KaptaanToken (KTN) safely via official Binance Smart Chain presale.</p>
+        <p style="color:#00ff66;">Token Address: <strong>0xbb622Af77C2999116b1343DFE22b373d119C0D19</strong></p>
+        <a href="https://thirdweb.com/binance/0xbb622Af77C2999116b1343DFE22b373d119C0D19" target="_blank">
+          Go to Presale
+        </a>
+        <p class="small-disclaimer">
+          ⚠️ Investing in presale tokens carries risk. Only invest what you can afford to lose.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mining Section -->
+  <section id="mining">
+    <h2 style="color:#00ff66;">Mining & Earning</h2>
+    <p style="color:#b3ffcc; max-width:900px; margin:auto;">
+      Earn KTN tokens by watching ads, sharing via WhatsApp, and referring friends. Transparent daily rewards displayed in your account dashboard. Start mining safely with our official APK.
+    </p>
+  </section>
+
+  <!-- APK Section -->
+  <section id="apk">
+    <h2 style="color:#00ff66;">APK Download</h2>
+    <p style="color:#b3ffcc; max-width:900px; margin:auto;">Download the official KaptaanToken APK to start earning tokens immediately.</p>
+    <a href="KaptaanToken.apk" class="apk-btn" download>Download APK</a>
+  </section>
+
+</body>
+</html>
